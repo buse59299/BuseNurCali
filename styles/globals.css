@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Spinner animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Loading container and spinner styles */
+.loading-container {
+  @apply flex justify-center items-center h-screen bg-gray-100;
+}
+
+.spinner {
+  @apply w-16 h-16 border-4 border-t-4 border-t-blue-500 border-gray-200 rounded-full;
+  animation: spin 1s linear infinite;
+}
